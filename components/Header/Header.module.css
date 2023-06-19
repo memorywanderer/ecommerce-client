@@ -1,0 +1,85 @@
+.container {
+  margin: .8rem 1rem;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  /* justify-content: space-between; */
+  padding: .8rem 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  margin-bottom: 1rem;
+}
+
+.logo {
+  font-size: var(--30px);
+  font-weight: 700;
+  width: 15rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-light);
+  max-width: 4rem;
+}
+
+.login {
+  /* padding: var(--16px);
+  border-radius: .5em;
+  background-color: var(--color-light); */
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-white);
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: var(--12px);
+}
+
+.icon {
+  width: var(--24px);
+  height: var(--24px);
+  color: var(--color-light);
+}
+
+.icon-btn {
+  margin-right: .2em;
+}
+
+.user {
+  font-size: var(--14px);
+}
+
+.badge {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 3px 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .link {
+    display: none;
+  }
+}

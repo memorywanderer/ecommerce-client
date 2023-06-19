@@ -1,0 +1,87 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  background-color: var(--color-white);
+  margin: .5rem 1rem;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  z-index: 2;
+}
+
+.list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list-v {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: var(--20px);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.icon {
+  width: var(--24px);
+  height: var(--24px);
+}
+
+.menu,
+.submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: fixed;
+  padding: 1rem;
+  left: -100%;
+  margin: .5rem;
+  border-radius: 1rem;
+  background-color: var(--color-white);
+  transition: left 0.2s ease-in-out;
+}
+
+.menu.open,
+.submenu.open {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 14%;
+}
+
+.badge {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  width: fit-content;
+  padding: 3px 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    display: flex;
+  }
+}

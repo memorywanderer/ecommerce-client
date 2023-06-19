@@ -1,0 +1,121 @@
+.card {
+  cursor: pointer;
+  display: flex;
+  padding: .5rem;
+  font-size: 1rem;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  border-radius: var(--8px);
+  flex: 1;
+}
+
+.body {
+  position: relative;
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.description {
+  margin-right: auto;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.author {
+  margin: 0;
+  font-weight: 500;
+}
+
+.img {
+  margin-right: 2rem;
+  align-self: center;
+}
+
+.counter {
+  flex: 0 0 7rem;
+  margin: 0 1rem;
+}
+
+.quantity {
+  display: flex;
+  height: 3rem;
+  max-width: 7rem;
+  height: 2rem;
+  border: 1px solid var(--color-dark-tertiary);
+  border-radius: .3rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 2rem;
+  padding: var(--11px);
+  border-radius: .3rem;
+  font-size: 1.3rem;
+}
+
+.input {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  min-width: 1.8rem;
+  height: 100%;
+  padding: var(--8px);
+}
+
+.price {
+  color: var(--color-dark);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.actions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.remove-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .3rem;
+  padding: var(--8px);
+  background-color: #E9F0FD;
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--color-primary)
+}
+
+@media screen and (max-width: 959px) {
+  .body {
+    flex-direction: column;
+  }
+
+  .counter {
+    margin: 0;
+    flex: 0 0 2.8rem;
+  }
+
+  .price {
+    color: var(--color-dark);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .input {
+    font-size: .8rem;
+
+    min-width: 1.2rem;
+  }
+}

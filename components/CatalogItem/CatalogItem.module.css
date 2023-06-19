@@ -1,0 +1,8 @@
+.catalog-link {
+  padding: 0.3em 0;
+}
+
+.catalog-link.active {
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
+}

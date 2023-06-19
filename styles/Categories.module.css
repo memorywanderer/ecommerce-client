@@ -1,0 +1,101 @@
+.container {
+  margin: 1rem;
+}
+
+.mobile-filter-btn {
+  display: none;
+}
+
+.top {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.filters {
+  position: sticky;
+  top: 1%;
+  width: fit-content;
+  height: fit-content;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--32px);
+  font-weight: 500;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: var(--24px);
+  font-weight: 700;
+}
+
+.body {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  row-gap: 1rem;
+  background-color: var(--color-white);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  height: fit-content;
+}
+
+.form {
+  max-width: 20rem;
+  display: grid;
+  gap: 1rem;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+
+}
+
+.price-filter {
+  display: grid;
+  gap: 1rem;
+}
+
+.icon {
+  width: var(--24px);
+  height: var(--24px);
+}
+
+@media screen and (max-width: 767px) {
+  .filters {
+    position: fixed;
+    left: -100%;
+    width: auto;
+    height: auto;
+    margin: .5rem;
+    transition: left 0.2s ease-in-out;
+  }
+
+  .mobile-filter-btn {
+    display: block;
+  }
+
+  .filters.open {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

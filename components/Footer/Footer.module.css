@@ -1,0 +1,17 @@
+.footer {
+  margin-top: 2rem;
+  display: flex;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 1rem 1rem 8rem;
+}
+
+.logo {
+  font-size: var(--30px);
+  font-weight: 700;
+  width: 15rem;
+}
+
+.description {
+  max-width: 650px;
+}
