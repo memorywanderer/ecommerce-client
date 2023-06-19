@@ -7,7 +7,6 @@ import typography from '../styles/Typography.module.css'
 const Search = ({ products, categories }) => {
   const router = useRouter()
   const { searchValue } = router.query
-  console.log(products)
   return (
     <>
       <Header categories={categories} />
@@ -24,7 +23,7 @@ const Search = ({ products, categories }) => {
 export const getServerSideProps = async (context) => {
   try {
     const searchValue = context.query.searchValue;
-    const response = await axios.post('/api/products', { searchValue });
+    const response = await axios.post('https://ecommerce-client-vert.vercel.app/api/products', { searchValue });
     const products = await response.data;
 
     const headerCategories = await axios.get(`https://ecommerce-client-vert.vercel.app/api/categories`);
