@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['https://ecommerce-admin-silk.vercel.app'],
+    domains: ['ecommerce-admin-silk.vercel.app'],
   },
 }
 

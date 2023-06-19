@@ -47,7 +47,7 @@ export default function Home({ categories }) {
 
 export const getStaticProps = async () => {
   try {
-    const res = await axios.get('/api/categories');
+    const res = await axios.get('https://ecommerce-client-vert.vercel.app/api/categories');
     const categories = res.data;
     return { props: { categories } };
   } catch (error) {
