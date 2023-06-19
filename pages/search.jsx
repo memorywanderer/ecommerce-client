@@ -12,10 +12,10 @@ const Search = ({ products, categories }) => {
     <>
       <Header categories={categories} />
       <div className='container'>
-        <div className={typography['title-36']}>You've searched for "{searchValue}"</div>
+        <div className={typography['title-36']}>You&apos;ve searched for &quot;{searchValue}&quot;</div>
         {products.length > 0 ? products.map(product => (
           <Product key={product._id} product={product} />
-        )) : <div className={typography.subtitle}>We didn't find anything</div>}
+        )) : <div className={typography.subtitle}>We didn&apos;t find anything</div>}
       </div>
     </>
   )

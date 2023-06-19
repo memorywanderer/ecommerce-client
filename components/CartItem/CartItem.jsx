@@ -15,7 +15,7 @@ export const CartItem = ({ product }) => {
       const item = state.cart.cartItems.find(item => item.product._id === product._id)
       setQuantity(item.quantity || 1)
     }
-  }, [])
+  }, [product])
 
   useEffect(() => {
     const getProduct = async () => {
@@ -35,7 +35,7 @@ export const CartItem = ({ product }) => {
       dispatch({ type: 'CART_ADD_ITEM', payload: { product, quantity } })
       setSubtotalPrice(product.price * quantity)
     }
-  }, [quantity])
+  }, [quantity, dispatch, stock])
 
   const handleCountIncrease = () => {
     if (quantity <= stock)

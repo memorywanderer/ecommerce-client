@@ -19,7 +19,7 @@ const Cart = ({ categories }) => {
   useEffect(() => {
     setCartItems(localStorageItems)
     setItemsCount(cartItems?.length || 0)
-  }, [localStorageItems])
+  }, [localStorageItems, cartItems])
 
   const handleClearCart = () => {
     dispatch({ type: "CART_RESET" })

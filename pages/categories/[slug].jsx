@@ -24,9 +24,6 @@ const Category = ({ products, categories }) => {
   const [isLoading, setIsLoading] = useState(true)
   const router = useRouter()
   const category = router.query.slug
-  useEffect(() => {
-    router.isReady && setIsLoading(false)
-  }, [])
 
   useEffect(() => {
     setFilteredProducts(products)
@@ -37,7 +34,7 @@ const Category = ({ products, categories }) => {
     setMaxPrice(Math.max(...prices))
     setMinPriceValue(Math.min(...prices))
     setMaxPriceValue(Math.max(...prices))
-  }, [products])
+  }, [products, maxPriceValue, minPriceValue])
 
 
   useEffect(() => {

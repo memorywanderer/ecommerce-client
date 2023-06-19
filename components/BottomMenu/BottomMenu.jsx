@@ -132,7 +132,7 @@ const Subcategory = ({ categories, currentCategory, setShowSubmenu, showSubmenu 
     (category) =>
       category.parentCategory !== null &&
       category.parentCategory._id === currentCategory._id
-  ), [categories])
+  ), [categories, currentCategory])
 
   return (
     <>
