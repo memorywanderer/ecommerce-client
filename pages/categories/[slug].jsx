@@ -21,7 +21,7 @@ const Category = ({ products, categories }) => {
   const [showFilteredProducts, setShowFilteredProducts] = useState(false)
   const [showMobileFilters, setShowMobileFilters] = useState(false)
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
   const category = router.query.slug
 
