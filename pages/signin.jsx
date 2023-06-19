@@ -76,7 +76,7 @@ const Signin = () => {
           {!isSubmitting ? 'Sign in' : 'Signing in...'}
         </button>
 
-        <p className={form.label}>Doesn't have an account?<Link className={button.link} href='/signup'>Sign up</Link></p>
+        <p className={form.label}>Doesn&apos;t have an account?<Link className={button.link} href='/signup'>Sign up</Link></p>
 
       </form>
     </div>

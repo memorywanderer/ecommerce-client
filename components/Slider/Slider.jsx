@@ -21,6 +21,7 @@ export const Slider = ({ items }) => {
           src={`https://ecommerce-admin-silk.vercel.app/images/${items.length > 0 && items[currentSlide]}`}
           width={480}
           height={500}
+          alt=''
         />
       </div>
       <div className={styles.thumbs}>
@@ -34,6 +35,7 @@ export const Slider = ({ items }) => {
               src={`https://ecommerce-admin-silk.vercel.app/images/${item}`}
               width={250}
               height={110}
+              alt=''
             />
           </div>))}
       </div>

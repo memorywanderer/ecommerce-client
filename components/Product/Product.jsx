@@ -16,7 +16,13 @@ export const Product = ({ product }) => {
 
   return (
     <Link href={`/products/${product._id}`} className={styles.card}>
-      <Image src={`https://ecommerce-admin-silk.vercel.app/images/${product?.imagesUrl[0]}`} className={styles.img} width={200} height={320} alt={product.title} />
+      <Image
+        src={`https://ecommerce-admin-silk.vercel.app/images/${product?.imagesUrl[0]}`}
+        className={styles.img}
+        width={200}
+        height={320} a
+        lt={product.title}
+      />
       <div className={styles.body}>
         <p className={styles.price}>{product.price}₸</p>
         <h1 className={styles.title}>{product.title}</h1>
