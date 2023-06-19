@@ -29,6 +29,7 @@ export const Slider = ({ items }) => {
           <div
             onClick={() => setCurrentSlide(index)}
             className={styles.thumb}
+            key={index}
           >
             <Image
               className={styles.img}
