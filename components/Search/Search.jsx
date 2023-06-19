@@ -14,7 +14,7 @@ export const Search = () => {
   const debouncedSearch = useRef(debounce(async (searchValue) => {
     setSearchValue(searchValue)
     try {
-      const response = await axios.post('api/products', { searchValue });
+      const response = await axios.post('/api/products', { searchValue });
     } catch (error) {
       console.error('Error occurred during search:', error);
     }

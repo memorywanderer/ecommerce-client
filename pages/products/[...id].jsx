@@ -170,9 +170,9 @@ const Product = ({ product, categories }) => {
 
 export const getServerSideProps = async (context) => {
   const productId = context.query.id
-  const response = await axios.get(`/api/products/?id=${productId}`)
+  const response = await axios.get(`https://ecommerce-client-vert.vercel.app/api/products/?id=${productId}`)
   const product = await response.data
-  const response2 = await axios.get(`/api/categories/`)
+  const response2 = await axios.get(`https://ecommerce-client-vert.vercel.app/api/categories/`)
   const categories = await response2.data
 
   return {

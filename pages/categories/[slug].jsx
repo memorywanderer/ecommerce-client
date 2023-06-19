@@ -41,7 +41,7 @@ const Category = ({ products, categories }) => {
     const getProductByFilter = async () => {
       try {
         setIsLoading(true)
-        const response = await axios.get(`http://localhost:3000/api/products/?category=${category}&minPrice=${minPriceValue}&maxPrice=${maxPriceValue}&authors=${selectedAuthors}`)
+        const response = await axios.get(`/api/products/?category=${category}&minPrice=${minPriceValue}&maxPrice=${maxPriceValue}&authors=${selectedAuthors}`)
         setFilteredProducts(response.data)
       } catch (error) {
         if (error.response && error.response.status === 404) {
@@ -182,10 +182,10 @@ export const getServerSideProps = async (context) => {
   try {
     const category = context.query.slug;
 
-    const productsByCategoryResponse = await axios.get(`http://localhost:3000/api/products/?category=${category}`);
+    const productsByCategoryResponse = await axios.get(`https://ecommerce-client-vert.vercel.app/api/products/?category=${category}`);
     const products = productsByCategoryResponse.data;
 
-    const headerCategories = await axios.get(`http://localhost:3000/api/categories`);
+    const headerCategories = await axios.get(`https://ecommerce-client-vert.vercel.app/api/categories`);
     const categories = headerCategories.data;
 
     return {

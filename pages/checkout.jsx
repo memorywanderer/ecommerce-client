@@ -165,7 +165,7 @@ const Checkout = ({ categories }) => {
 
 export const getServerSideProps = async () => {
   try {
-    const response = await axios.get('/api/categories')
+    const response = await axios.get('https://ecommerce-client-vert.vercel.app/api/categories')
     const categories = response.data
 
     return {

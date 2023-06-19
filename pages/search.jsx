@@ -27,7 +27,7 @@ export const getServerSideProps = async (context) => {
     const response = await axios.post('/api/products', { searchValue });
     const products = await response.data;
 
-    const headerCategories = await axios.get(`/api/categories`);
+    const headerCategories = await axios.get(`https://ecommerce-client-vert.vercel.app/api/categories`);
     const categories = headerCategories.data;
 
     return {
@@ -40,7 +40,7 @@ export const getServerSideProps = async (context) => {
     console.log('Error in search page: ', error);
 
     // Handle the error and still return the categories
-    const headerCategories = await axios.get(`http://localhost:3000/api/categories`);
+    const headerCategories = await axios.get(`https://ecommerce-client-vert.vercel.app/api/categories`);
     const categories = headerCategories.data;
 
     return {
