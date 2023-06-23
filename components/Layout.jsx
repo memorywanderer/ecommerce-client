@@ -7,7 +7,7 @@ export const Layout = ({ children }) => {
   return (
     <>
       <BottomMenu />
-      <main>
+      <main style={{ position: 'relative' }}>
         <Suspense fallback={<Loading />}>
           {children}
         </Suspense>
