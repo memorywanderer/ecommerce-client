@@ -1,7 +1,6 @@
-import { Suspense } from "react"
+import { useState } from "react"
 import { BottomMenu } from "./BottomMenu/BottomMenu"
 import { Footer } from "./Footer/Footer"
-import { Loading } from "./Loading"
 import { Spinner } from "./Spinner/Spinner"
 import { useRouter } from "next/router"
 
@@ -35,10 +34,8 @@ export const Layout = ({ children }) => {
   return (
     <>
       <BottomMenu />
-      <main style={{ position: 'relative' }}>
-        <Suspense fallback={<Loading />}>
-          {children}
-        </Suspense>
+      <main>
+        {children}
       </main>
       <Footer />
     </>
