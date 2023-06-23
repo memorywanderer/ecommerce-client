@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { BottomMenu } from "./BottomMenu/BottomMenu"
 import { Footer } from "./Footer/Footer"
 import { Spinner } from "./Spinner/Spinner"
