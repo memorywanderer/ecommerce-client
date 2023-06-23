@@ -1,7 +1,9 @@
+import styles from './Spinner.module.css'
+
 export const Spinner = () => {
   return (
-    <div class="loadingSpinnerContainer">
-      <div className="loadingSpinner"></div>
+    <div class={styles.container}>
+      <div className={styles.spinner}></div>
     </div>
   )
 }

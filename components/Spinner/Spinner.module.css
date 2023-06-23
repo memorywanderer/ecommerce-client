@@ -1,5 +1,5 @@
 /* Loading spinner */
-.loadingSpinnerContainer {
+.container {
   position: fixed;
   top: 0;
   right: 0;
@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-.loadingSpinner {
+.spinner {
   width: 64px;
   height: 64px;
   border: 8px solid;

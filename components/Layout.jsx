@@ -29,7 +29,9 @@ export const Layout = ({ children }) => {
   }, [])
 
   if (loading) {
-    return <p>Loading...</p>
+    return <>
+      <Spinner />
+    </>
   }
   return (
     <>
