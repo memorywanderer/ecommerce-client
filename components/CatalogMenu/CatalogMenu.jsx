@@ -1,12 +1,36 @@
+'use client'
 import { useEffect, useState } from "react"
 import { CatalogItem } from "../CatalogItem/CatalogItem"
 import styles from './CatalogMenu.module.css'
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 export const CatalogMenu = ({ showCatalog, categories }) => {
   const [catalogCategories, setCatalogCategories] = useState(null)
   const [currentMenu, setCurrentMenu] = useState(null)
   const [menuItemHovered, setMenuItemHovered] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const router = useRouter()
+
+  useEffect(() => {
+    const start = () => {
+      setLoading(true)
+    }
+    const end = () => {
+      setLoading(false)
+    }
+
+    router.events.on('routeChangeStart', start)
+    router.events.on('routeChangeComplete', end)
+    router.events.on('routeChangeError', end)
+
+    return () => {
+      router.events.off('routeChangeStart', start)
+      router.events.off('routeChangeComplete', end)
+      router.events.off('routeChangeError', end)
+    }
+  }, [])
 
   useEffect(() => {
     /*
