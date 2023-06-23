@@ -32,6 +32,8 @@ export const CatalogMenu = ({ showCatalog, categories }) => {
     }
   }, [])
 
+
+
   useEffect(() => {
     /*
       Категории разделены на две группы:
@@ -67,6 +69,10 @@ export const CatalogMenu = ({ showCatalog, categories }) => {
   const handleMouseLeave = () => {
     setCurrentMenu(null)
     setMenuItemHovered(false)
+  }
+
+  if (loading) {
+    return <p>Loading...</p>
   }
 
   return (
