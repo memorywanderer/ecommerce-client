@@ -1,5 +1,7 @@
 export const Spinner = () => {
   return (
-    <div class="lds-dual-ring"></div>
+    <div class="loadingSpinnerContainer">
+      <div className="loadingSpinner"></div>
+    </div>
   )
 }
