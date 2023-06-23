@@ -11,7 +11,7 @@ const Custom404 = () => {
   useEffect(() => {
     const getCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/categories')
+        const response = await axios.get('https://ecommerce-client-vert.vercel.appapi/categories')
         const categoriesData = response.data
         setCategories(categoriesData)
       } catch (error) {
