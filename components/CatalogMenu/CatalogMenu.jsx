@@ -4,6 +4,7 @@ import { CatalogItem } from "../CatalogItem/CatalogItem"
 import styles from './CatalogMenu.module.css'
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { Spinner } from "../Spinner/Spinner"
 
 export const CatalogMenu = ({ showCatalog, categories }) => {
   const [catalogCategories, setCatalogCategories] = useState(null)
@@ -72,7 +73,7 @@ export const CatalogMenu = ({ showCatalog, categories }) => {
   }
 
   if (loading) {
-    return <p>Loading...</p>
+    return <Spinner />
   }
 
   return (
